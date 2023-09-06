@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Recipe>
+
+<h2>Recipes</h2>
+
+<div style="display: block">
+    <a href="/Recipe/InsertRecipe/">Create a New Recipe</a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Recipe Description</th>
+        <th>Category ID</th>
+        <th>Ingredients</th>
+    </tr>
+
+    @foreach (var recipe in @Model)
+    {
+        <tr>
+            <td><a href=/Recipe/ViewRecipe/@recipe.RecipeID>@recipe.RecipeID</a></td>
+            <td>@recipe.Name</td>
+            <td>@recipe.RecipeDescription</td>
+            <td>@recipe.CategoryID</td>
+            <td>@recipe.Ingredients</td>
+        </tr>
+    }
+
+</table>

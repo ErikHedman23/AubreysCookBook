@@ -1,0 +1,19 @@
+﻿@model Recipe
+
+<h2>Update @Model.Name</h2>
+
+@using (Html.BeginForm("UpdateRecipeToDatabase", "Recipe", "Post"))
+{
+    <input asp-for="RecipeID" type="hidden" value="@Model.RecipeID" />
+
+    <label asp-for="Name" class="control-label">Name</label>
+    <input type="text" name="Name" class="form-control" value="@Model.Name" />
+
+    <label asp-for="RecipeDescription" class="control-label">Recipe Description</label>
+    <input type="text" step="0.01" name="RecipeDescription" class="form-control" value="@Model.RecipeDescription" />
+
+    <label asp-for="Ingredients" class="control-label">Ingredients</label>
+    <input type="text" step="0.01" name="Ingredients" class="form-control" value="@Model.Ingredients" />
+
+    <input type="submit" value="Update Recipe" class="btn btn-primary" />
+}
