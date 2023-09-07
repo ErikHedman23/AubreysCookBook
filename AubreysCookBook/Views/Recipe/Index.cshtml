@@ -21,7 +21,37 @@
             <td><a href=/Recipe/ViewRecipe/@recipe.RecipeID>@recipe.RecipeID</a></td>
             <td>@recipe.Name</td>
             <td>@recipe.RecipeDescription</td>
-            <td>@recipe.CategoryID</td>
+            @switch(recipe.CategoryID)
+                {
+                    case 1:
+                        <td>Cakes</td>
+                        break;
+                    case 2:
+                        <td>Cookies</td>
+                        break;
+                    case 3:
+                        <td>Muffins</td>
+                        break;
+                    case 4:
+                        <td>Breads</td>
+                        break;
+                    case 5:
+                        <td>Garnishes</td>
+                        break;
+                    case 6:
+                        <td>Custards</td>
+                        break;
+                    case 7:
+                        <td>Crusts</td>
+                        break;
+                    case 8:
+                        <td>Pies/Tarts</td>
+                        break;
+                    case 9:
+                        <td>Breakfasts</td>
+                        break;
+                }
+            
             <td>@recipe.Ingredients</td>
         </tr>
     }
