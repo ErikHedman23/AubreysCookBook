@@ -64,4 +64,10 @@ body {
 
 #FindRecipe {
     font-size: large;
+    padding: 20px;
+    cursor: default;
+    margin: 25px 0;
+  
 }
+
+

@@ -11,10 +11,39 @@
         <th>Ingredients</th>
     </tr>
     <tr>
-        <td>@Model.RecipeID</td>
+        <td id="RecipeView">@Model.RecipeID</td>
         <td>@Model.Name</td>
         <td>@Model.RecipeDescription</td>
-        <td>@Model.CategoryID</td>
+        @switch (Model.CategoryID)
+        {
+            case 1:
+                <td>Cakes</td>
+                break;
+            case 2:
+                <td>Cookies</td>
+                break;
+            case 3:
+                <td>Muffins</td>
+                break;
+            case 4:
+                <td>Breads</td>
+                break;
+            case 5:
+                <td>Garnishes</td>
+                break;
+            case 6:
+                <td>Custards</td>
+                break;
+            case 7:
+                <td>Crusts</td>
+                break;
+            case 8:
+                <td>Pies/Tarts</td>
+                break;
+            case 9:
+                <td>Breakfasts</td>
+                break;
+        }
         <td>@Model.Ingredients</td>
     </tr>
 </table>
