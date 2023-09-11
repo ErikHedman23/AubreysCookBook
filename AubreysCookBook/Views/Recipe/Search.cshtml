@@ -4,14 +4,14 @@
 
 @using (Html.BeginForm("Search", "Recipe", "Get"))
 {
-    <p>
+    <p id="FindRecipe">
         Find by recipe name: @Html.TextBox("searchString")
         <input type="submit" value="Search" />
     </p>
 }
 
 <div style="display: block">
-    <a href="/Recipe/InsertRecipe/">Create a New Recipe</a>
+    <a id="InsertRecipe" href="/Recipe/InsertRecipe/">Add a New Recipe</a>
 </div>
 
 <table class="table">

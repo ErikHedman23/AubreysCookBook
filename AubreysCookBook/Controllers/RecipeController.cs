@@ -85,7 +85,17 @@ namespace AubreysCookBook.Controllers
         //}
         public IActionResult Search(string searchString) 
         {
+            if (string.IsNullOrEmpty(searchString))
+            {
+                return View("NoRecipesFound");
+            }
+
             var searchResults = repo.SearchRecipe(searchString);
+
+            if(!searchResults.Any())
+            {
+                return View("NoRecipesFound");
+            }
             return View(searchResults);
         }
 

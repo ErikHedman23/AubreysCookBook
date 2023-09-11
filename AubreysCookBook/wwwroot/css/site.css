@@ -52,5 +52,16 @@ body {
     font-size: 100px;
 }
 #RecipeView {
-    color
+    color: chocolate;
+    text-decoration: none;
+}
+
+#InsertRecipe {
+    color: chocolate;
+    text-decoration: none;
+    font-size: large;
+}
+
+#FindRecipe {
+    font-size: large;
 }
