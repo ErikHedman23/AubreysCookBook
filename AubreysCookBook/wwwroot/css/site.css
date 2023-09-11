@@ -67,7 +67,25 @@ body {
     padding: 20px;
     cursor: default;
     margin: 25px 0;
-  
+   
 }
+
+    #FindRecipe input[type="text"] {
+        font-size: 16px; /* Change the font size */
+        padding: 10px; /* Add padding to the input */
+        margin: 5px; /* Add margin around the input */
+        border: 1px solid #ccc; /* Add a border to the input */
+        border-radius: 6px; /* Add rounded corners */
+        background-color: #f4f4f4; /* Change the background color */
+        color: #333;
+       // background-image: url('https://thumb.photo-ac.com/2a/2a8efb616232e261439a21dc19796838_t.jpeg');
+       
+    }
+
+    #TableRow {
+        background-image: url('https://thumb.photo-ac.com/2a/2a8efb616232e261439a21dc19796838_t.jpeg');
+        border: outset;
+
+    }
 
 

@@ -25,7 +25,7 @@
 
     @foreach (var recipe in @Model)
     {
-        <tr>
+        <tr id ="TableRow">
             <td><a id="RecipeView" href=/Recipe/ViewRecipe/@recipe.RecipeID>@recipe.RecipeID</a></td>
             <td>@recipe.Name</td>
             <td>@recipe.RecipeDescription</td>
