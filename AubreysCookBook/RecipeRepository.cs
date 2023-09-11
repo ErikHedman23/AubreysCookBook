@@ -52,14 +52,20 @@ namespace AubreysCookBook
             _conn.Execute("DELETE FROM Recipes WHERE RecipeID = @id;", new { id = recipe.RecipeID });
         }
 
-        public Recipe GetRecipeByName(Recipe name)
+        public IEnumerable<Recipe> SearchRecipe(string searchString)
         {
-            return
+            return _conn.Query<Recipe>("SELECT * FROM RECIPES WHERE NAME LIKE @name;", 
+                new {name = "%" + searchString + "%"});
         }
 
-        public IEnumerable<Recipe> GetRecipesByCategory(Category categoryName)
-        {
-            return
-        }
+        //public Recipe GetRecipeByName(string name)
+        ////{
+        ////    return _conn.QuerySingle<Recipe>("SELECT * FROM RECIPES WHERE NAME = @name;", new { name = name });
+        ////}
+
+        ////public IEnumerable<Recipe> GetRecipesByCategory(int categoryID)
+        ////{
+        ////    return _conn.Query<Recipe>("SELECT * FROM RECIPES WHERE CATEGORYID = (SELECT CATEGORYID FROM CATEGORIES WHERE CATEGORYID = @categoryID);", new { categoryID = categoryID });
+        ////}
     }
 }

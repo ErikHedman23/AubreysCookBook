@@ -6,15 +6,22 @@ namespace AubreysCookBook.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        //private readonly ILogger<HomeController> _logger;
+        private readonly IRecipeRepository _recipeRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IRecipeRepository repo)
         {
-            _logger = logger;
+            _recipeRepository = repo;
         }
+
+        //public HomeController(ILogger<HomeController> logger)
+        //{
+        //    _logger = logger;
+        //}
 
         public IActionResult Index()
         {
+            //var recipe = _recipeRepository.GetRecipe()
             return View();
         }
 

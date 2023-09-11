@@ -11,7 +11,8 @@ namespace AubreysCookBook
         public IEnumerable<Category> GetCategories();
         public Recipe AssignCategory();
         public void DeleteRecipe(Recipe recipe);
-        public Recipe GetRecipeByName(Recipe name);
-        public IEnumerable<Recipe> GetRecipesByCategory(Category categoryName);
+        //public Recipe GetRecipeByName(string nameOfRecipe);
+        //public IEnumerable<Recipe> GetRecipesByCategory(int categoryID);
+        public IEnumerable<Recipe> SearchRecipe(string searchString);
     }
 }

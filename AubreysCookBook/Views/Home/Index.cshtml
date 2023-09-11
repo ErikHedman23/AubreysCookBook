@@ -1,8 +1,42 @@
-﻿@{
+﻿
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <img id="CookBookLogo" src="css/images/MalkiesTreatsLogo.png" alt="Image of Malkie's Treats Logo"/>
+    <h1 id="display-4">Malkie's Treats</h1>
+    <p id="paragraph_1">An online cookbook for all of Malkiel's favorite baked treats.</p>
 </div>
+@* <img id="CookBookLogo" src="https://imgur.com/a/TjtifRL" alt="Image of Malkie's Treats Logo"/> *@
+
+@* @using (Html.BeginForm("ViewRecipeByName", "Recipe", "Get"))
+{
+    <label asp-for="Name">Recipe Name:</label>
+    <input type="text" name="searchName" placeholder="Enter recipe by name" />
+    <input type="submit" value="Search" />    
+}  *@
+@* @using (Html.BeginForm("ViewRecipesByCategoryName", "Recipe", "Get"))
+{
+
+    @if (Model.Categories != null && Model.Categories.Any())
+    {
+        
+    <label asp-for="CategoryID">Recipe Category:</label>
+    <select class="form-control" name="CategoryID" value="">
+        @foreach (var cat in Model.Categories)
+        {
+                <option value="@cat.CategoryID">@cat.CategoryID @cat.Name</option>
+        }
+    </select>
+        <input type="submit" value="Search" />
+    }
+
+    else
+    {
+        <p>No Categories to show.</p>
+    }
+
+
+} *@

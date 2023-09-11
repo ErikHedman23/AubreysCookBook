@@ -18,5 +18,39 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #FFEBCD;
+}
+
+* {
+    font-family: Parisienne;
+}
+
+#CookBookLogo {
+    max-width: 550px;
+    max-height: 550px;
+}
+
+#paragraph_1 {
+    font-size: 30px;
+    
+    
+}
+
+#navBarID {
+    background-color: ghostwhite;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+#nav-item {
+    color: pink;
+}
+
+#display-4 {
+    font-size: 100px;
+}
+#RecipeView {
+    color
 }

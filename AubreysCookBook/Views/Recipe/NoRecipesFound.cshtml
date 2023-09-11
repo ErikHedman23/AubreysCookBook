@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "No Recipe Found";
+}
+
+<div class="text-center">
+    <h1 class="display-4">It appears you did not enter the correct information...</h1>
+    <p>Please ensure you type in the correct recipe name or the correct recipe category name.</p>
+    <p>Here are a list of category names to enter in: Cakes, Cookies, Muffins, Breads, Garnishes, Custards, Crusts, Pies/Tarts, or Breakfasts.</p>
+</div>
+
+<form action="/Recipe/Search" method="get">
+    <input type="text" name="query" placeholder="Enter recipe or category name">
+    <input type="submit" value="Search">
+</form>
+
