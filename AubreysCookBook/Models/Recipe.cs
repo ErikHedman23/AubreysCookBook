@@ -8,5 +8,6 @@
         public int CategoryID { get; set; }
         public string Ingredients { get; set; }
         public IEnumerable<Category> Categories { get; set; }
+        public string ?ImagePath { get; set; }
     }
 }

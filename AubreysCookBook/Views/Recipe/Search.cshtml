@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<Recipe>
 
+
 <h2>Recipes</h2>
 
 @using (Html.BeginForm("Search", "Recipe", "Get"))
@@ -21,6 +22,7 @@
         <th>Recipe Description</th>
         <th>Category ID</th>
         <th>Ingredients</th>
+        <th>Example Image</th>
     </tr>
 
     @foreach (var recipe in @Model)
@@ -61,6 +63,8 @@
             }
 
             <td>@recipe.Ingredients</td>
+            @* <td><img src=@recipe.ImagePath/></td> *@
+<td><img id="ExampleImageIDSearch" src="~/@recipe.ImagePath" alt="Image" /></td>
         </tr>
     }
 

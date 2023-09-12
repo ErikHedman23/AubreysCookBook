@@ -64,6 +64,7 @@ body {
 
 #FindRecipe {
     font-size: large;
+    font-style: inherit;
     padding: 20px;
     cursor: default;
     margin: 25px 0;
@@ -82,10 +83,26 @@ body {
        
     }
 
-    #TableRow {
-        background-image: url('https://thumb.photo-ac.com/2a/2a8efb616232e261439a21dc19796838_t.jpeg');
-        border: outset;
+#TableRow {
+    background-image: url('https://thumb.photo-ac.com/2a/2a8efb616232e261439a21dc19796838_t.jpeg');
+    border: outset;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
 
-    }
+#ExampleImageIDSearch {
+    max-width: 200px;
+    max-height: 200px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    border: 5px hidden ghostwhite;
+    border-radius: 70px;
+}
 
+
+.ViewImage {
+    max-width: 400px;
+    max-height: 400px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    border: 5px hidden;
+    border-radius: 70px;
+}
 

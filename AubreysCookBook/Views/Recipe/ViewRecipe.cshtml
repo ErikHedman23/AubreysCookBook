@@ -9,6 +9,7 @@
         <th>Recipe Description</th>
         <th>Category ID</th>
         <th>Ingredients</th>
+        
     </tr>
     <tr id="TableRow">
         <td id="RecipeView">@Model.RecipeID</td>
@@ -47,6 +48,10 @@
         <td>@Model.Ingredients</td>
     </tr>
 </table>
+<div class="text-center">
+    <img class="ViewImage" src="~/@Model.ImagePath" alt="Image" />
+
+</div>
 
 <div style="display: block; margin-bottom: 20px;">
     <a href="/Recipe/UpdateRecipe/@Model.RecipeID"><input type="button" value="Update this Recipe"/></a>

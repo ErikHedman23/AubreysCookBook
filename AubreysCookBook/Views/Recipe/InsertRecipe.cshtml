@@ -25,5 +25,8 @@
         </select>
     </div>
 
+    <label asp-for="ImagePath" class="control-label">Copy and paste the image url or the file path here for an Example Image:</label>
+    <input id="TableRow" type="text" step="0.01" name="ImagePath" class="form-control" value="@Model.ImagePath" />
+
     <input type="submit" value="Add Recipe" class="btn btn-primary" />
 }

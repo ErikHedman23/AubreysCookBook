@@ -26,8 +26,8 @@ namespace AubreysCookBook
 
         public void UpdateRecipe(Recipe recipe)
         {
-            _conn.Execute("UPDATE recipes SET Name = @name, RecipeDescription = @recipedescription, Ingredients = @ingredients WHERE RecipeID = @id",
-             new { name = recipe.Name, recipedescription = recipe.RecipeDescription, id = recipe.RecipeID, ingredients = recipe.Ingredients });
+            _conn.Execute("UPDATE recipes SET Name = @name, RecipeDescription = @recipedescription, Ingredients = @ingredients, ImagePath = @imagePath WHERE RecipeID = @id",
+             new { name = recipe.Name, recipedescription = recipe.RecipeDescription, id = recipe.RecipeID, ingredients = recipe.Ingredients, imagePath = recipe.ImagePath });
         }
         public void InsertRecipe(Recipe recipeToInsert)
         {

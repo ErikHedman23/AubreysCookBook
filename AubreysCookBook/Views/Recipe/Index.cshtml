@@ -21,6 +21,8 @@
         <th>Recipe Description</th>
         <th>Category ID</th>
         <th>Ingredients</th>
+        <th>Example Image</th>
+        
     </tr>
 
     @foreach (var recipe in @Model)
@@ -61,6 +63,7 @@
                 }
             
             <td>@recipe.Ingredients</td>
+            <td><img id ="ExampleImageIDSearch"src=@recipe.ImagePath alt="Image of a Gluten free choclate cake"/></td>
         </tr>
     }
 
