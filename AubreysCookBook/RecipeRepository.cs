@@ -31,8 +31,8 @@ namespace AubreysCookBook
         }
         public void InsertRecipe(Recipe recipeToInsert)
         {
-            _conn.Execute("INSERT INTO recipes (NAME, RECIPEDESCRIPTION, CATEGORYID, INGREDIENTS) VALUES (@name, @recipedescription, @categoryID, @ingredients);",
-        new { name = recipeToInsert.Name, recipedescription = recipeToInsert.RecipeDescription, categoryID = recipeToInsert.CategoryID, ingredients = recipeToInsert.Ingredients });
+            _conn.Execute("INSERT INTO recipes (NAME, RECIPEDESCRIPTION, CATEGORYID, INGREDIENTS, IMAGEPATH) VALUES (@name, @recipedescription, @categoryID, @ingredients, @imagePath);",
+        new { name = recipeToInsert.Name, recipedescription = recipeToInsert.RecipeDescription, categoryID = recipeToInsert.CategoryID, ingredients = recipeToInsert.Ingredients, imagePath = recipeToInsert.ImagePath });
         }
         public IEnumerable<Category> GetCategories()
         {
