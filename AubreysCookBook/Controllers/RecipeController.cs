@@ -7,10 +7,12 @@ namespace AubreysCookBook.Controllers
     {
 
         private readonly IRecipeRepository repo;
+        //private readonly IWebHostEnvironment _env;
 
-        public RecipeController(IRecipeRepository repo)
+        public RecipeController(IRecipeRepository repo, IWebHostEnvironment env)
         {
             this.repo = repo;
+            //_env = env;
         }
         public IActionResult Index()
         {
@@ -53,6 +55,28 @@ namespace AubreysCookBook.Controllers
             return RedirectToAction("Index");
         }
 
+        //public IActionResult InsertImageIntoDatabase(Recipe imageToInsert, IFormFile imageFile)
+        //{
+        //    if (imageFile != null && imageFile.Length > 0)
+        //    {
+        //        // Get the file name and combine it with the "Images" folder path
+        //        var fileName = Path.Combine(_env.WebRootPath, "Images", imageFile.FileName);
+
+        //        // Save the uploaded file to the specified path
+        //        using (var fileStream = new FileStream(fileName, FileMode.Create))
+        //        {
+        //            imageFile.CopyTo(fileStream);
+        //        }
+
+        //        // Save the file path (e.g., "/Images/image.jpg") to your database
+        //        imageToInsert.ImagePath = $"/Images/{imageFile.FileName}";
+        //    }
+
+        //    // Save other recipe details to the database using recipeViewModel
+        //    repo.InsertRecipe(imageToInsert);
+
+        //    return RedirectToAction("Index");
+        //}
         public IActionResult DeleteRecipe(Recipe recipe)
         {
             repo.DeleteRecipe(recipe);
