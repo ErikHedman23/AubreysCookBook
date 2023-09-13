@@ -106,11 +106,5 @@ body {
     border-radius: 70px;
 }
 
-#ExampleImageIDSearchDefault {
-    max-width: 200px;
-    max-height: 200px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
-    border: 5px hidden ghostwhite;
-    border-radius: 70px;
-}
+
 

@@ -58,14 +58,6 @@ namespace AubreysCookBook
                 new {name = "%" + searchString + "%"});
         }
 
-        //public Recipe GetRecipeByName(string name)
-        ////{
-        ////    return _conn.QuerySingle<Recipe>("SELECT * FROM RECIPES WHERE NAME = @name;", new { name = name });
-        ////}
-
-        ////public IEnumerable<Recipe> GetRecipesByCategory(int categoryID)
-        ////{
-        ////    return _conn.Query<Recipe>("SELECT * FROM RECIPES WHERE CATEGORYID = (SELECT CATEGORYID FROM CATEGORIES WHERE CATEGORYID = @categoryID);", new { categoryID = categoryID });
-        ////}
+        
     }
 }

@@ -63,38 +63,10 @@
             }
 
             <td>@recipe.Ingredients</td>
-            @* <td><img src=@recipe.ImagePath/></td> *@
-            <td>
-                <img id="ExampleImageIDSearch" src="~/@recipe.ImagePath" alt="Image" />
-          @*  <img id="ExampleImageIDSearchDefault"  src="@Url.Content(recipe.ImagePath)" alt="Image" /> *@
-               @*  @if (!string.IsNullOrEmpty(recipe.ImagePath))
-                {
-                    <img id="ExampleImageIDSearch" src="~/@recipe.ImagePath" alt="Image" />
-                }
-                else
-                {
-                    //recipe.ImagePath = Url.Content(recipe.ImagePath);
-                    <img id="ExampleImageIDSearchDefault" src="@Url.Content(recipe.ImagePath)" alt="Image" />
-                } *@
-
-            </td>
-
+                    
+                <td><img id="ExampleImageIDSearch" src="~/@recipe.ImagePath" alt="Image" /></td>
         </tr>
     }
 
 </table>
-         @*    <script>
-                //var imageContainer = document.getElementById("ImageContainer");
-    var recipeImage = document.getElementById("ExampleImageIDSearch");
-    var defaultImage = document.getElementById("ExampleImageIDSearchDefault");
-
-                recipeImage.onerror = function () {
-                    // Hide the recipe image and show the default image if the recipe image fails to load
-                     recipeImage.style.display = "none";
-                     defaultImage.style.display = "none";
-                    //imageContainer.style.display = "none";
-                    recipeImage.removeAttribute("alt");
-                    defaultImage.removeAttribute("alt");
-                    
-                };
-            </script *@>
+         
