@@ -8,6 +8,7 @@ namespace AubreysCookBook
     {
         private readonly IDbConnection _conn;
 
+        //This is private field is declared as a readonly because we are wanting to create a connection using IDbConnection interface which creates a connection using Dapper to connect C# to MYSQL.  We aren't declaring it anything because we don't wish to alter how the interface functions, and we don't want to be able to alter it unless it is within a class constructor.
         public RecipeRepository(IDbConnection conn)
         {
             _conn = conn;
